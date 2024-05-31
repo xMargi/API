@@ -1,0 +1,209 @@
+:root {
+    --cor-principal: rgb(245, 245, 245);
+    --cor-secundaria: rgb(255, 152, 0);
+    --cor-secundaria-hover: rgb(180, 112, 10);
+    --cor-texto: rgb(32, 35, 41);
+    --cor-cartao: rgb(60, 62, 68);
+    --cor-subtitulo: rgb(158, 158, 158);
+    --font-titulo: "Sedan SC", serif;
+    --font-paragrafo: "Roboto Condensed", sans-serif;
+}
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    outline: none;
+    border: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-texto);
+    color: var(--cor-principal);
+}
+
+.cabecalho {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-principal);
+}
+
+
+.logo {
+    width: 6.25rem;
+    margin: 1.25rem 1.875rem;
+    filter: grayscale(100%);
+    opacity: 70%;
+}
+
+.container_section {
+    background-color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container_section_image {
+    position: relative;
+    left: 6.25rem;
+    z-index: 1;
+}
+
+.image_rick_mory {
+    opacity: 10%;
+    filter: grayscale(100%);
+}
+
+.container_main_title {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+}
+
+.main_title {
+    color: var(--cor-texto);
+    font-size: 7.5rem;
+    font-weight: 700;
+    font-family: var(--font-titulo);
+}
+
+.container_main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pesquisa {
+    margin-top: 3.125rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+.pesquisa input {
+    color: var(--cor-principal);
+    background-color: var(--cor-cartao);
+    padding: .625rem 1.25rem;
+    text-align: center;
+    border-radius: .625rem;
+    font-size: 19px;
+    font-family: var(--font-paragrafo);
+    letter-spacing: .3125rem;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+}
+
+.pesquisa button {
+    padding: .625rem 1.25rem;
+    color: var(--cor-principal);
+    background-color: var(--cor-cartao);
+    border-radius: .625rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: var(--font-paragrafo);
+    letter-spacing: .1875rem;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+}
+
+.pesquisa button:hover {
+    transition: all 0.566s;
+    color: var(--cor-secundaria);
+
+}
+
+.container_cartoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 3.125rem;
+    padding: 20px;
+}
+
+.cartao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: .625rem;
+    width: 37.5rem;
+    height: 16.25rem;
+    background-color: var(--cor-cartao);
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+}
+
+.imagemCard {
+    width: 260px;
+    border-top-left-radius: .625rem;
+    border-bottom-left-radius: .625rem;
+}
+
+.cartaoDivisao {
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.nomeCard {
+    font-size: 30px;
+    color: var(--cor-principal);
+    font-weight: 700;
+    font-family: var(--font-titulo);
+    width: 100%;
+    text-wrap: nowrap;
+}
+
+.statusCard,
+.lastKnow,
+.location,
+.identificacao {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-paragrafo);
+    letter-spacing: .3125rem;
+}
+
+.statusDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.alive {
+    background-color: green;
+}
+
+.dead {
+    background-color: red;
+}
+
+.unknow {
+    background-color: cornsilk;
+}
+
+.lastKnow,
+.identificacao {
+    color: var(--cor-subtitulo);
+}
+
+.nomeCard:hover,
+.location:hover {
+    color: var(--cor-secundaria);
+    transition: all 0.350s;
+}
