@@ -82,7 +82,7 @@ function createCards(character: getAllCharacterInfo) {
 async function showCharacter() {
     const promises = [];
 
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 1; i <= 8; i++) {
         promises.push(fetchCharacter(i));
     }
 
