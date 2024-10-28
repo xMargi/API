@@ -113,5 +113,9 @@ async function searchCharacters() {
     });
 }
 
+async function deleteCard(){
+    
+}
+
 const buttonPesquisa = document.getElementById('pesquisa');
 buttonPesquisa.addEventListener('click', searchCharacters);
